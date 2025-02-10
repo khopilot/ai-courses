@@ -9,7 +9,9 @@ const nextConfig = {
     // This will help with hydration mismatches
     optimizeCss: true,
     // Use React's new streaming SSR architecture
-    serverActions: true,
+    serverActions: {
+      bodySizeLimit: '2mb'
+    }
   }
 };
 

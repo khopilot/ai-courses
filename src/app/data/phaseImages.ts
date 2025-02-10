@@ -1,4 +1,8 @@
-export const phaseImages = {
+interface PhaseImages {
+  [key: string]: string;
+}
+
+export const phaseImages: PhaseImages = {
   "Phase 1: Foundations of Web Development": "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?q=80&w=1000",
   "Phase 2: Intermediate Web Development": "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1000",
   "Phase 3: Introduction to AI and Machine Learning": "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1000",

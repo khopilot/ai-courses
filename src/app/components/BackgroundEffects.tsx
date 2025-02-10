@@ -1,7 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
-
 export default function BackgroundEffects() {
   return (
     <div className="fixed inset-0 pointer-events-none">
