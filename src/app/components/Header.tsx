@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import MatrixRain from './MatrixRain';
+import { FaGithub, FaLinkedin, FaTelegram, FaWhatsapp } from 'react-icons/fa';
 
 interface HeaderProps {
   title: string;
@@ -12,6 +13,46 @@ interface HeaderProps {
 export default function Header({ title, subtitle, author, objective, targetAudience }: HeaderProps) {
   return (
     <header className="relative min-h-screen overflow-hidden perspective-2000">
+      {/* Social Media Links */}
+      <div className="absolute top-4 right-4 z-50 flex items-center gap-4">
+        <a
+          href="https://www.linkedin.com/in/nicolas-delrieu-a61a60224"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white/80 hover:text-white transform hover:scale-110 transition-all duration-300"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedin className="w-6 h-6" />
+        </a>
+        <a
+          href="https://github.com/khopilot"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white/80 hover:text-white transform hover:scale-110 transition-all duration-300"
+          aria-label="GitHub"
+        >
+          <FaGithub className="w-6 h-6" />
+        </a>
+        <a
+          href="https://t.me/+85592332554"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white/80 hover:text-white transform hover:scale-110 transition-all duration-300"
+          aria-label="Telegram"
+        >
+          <FaTelegram className="w-6 h-6" />
+        </a>
+        <a
+          href="https://wa.me/85592332554"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white/80 hover:text-white transform hover:scale-110 transition-all duration-300"
+          aria-label="WhatsApp"
+        >
+          <FaWhatsapp className="w-6 h-6" />
+        </a>
+      </div>
+
       {/* Animated background with advanced effects */}
       <div className="absolute inset-0">
         {/* Subtle gradient background */}
