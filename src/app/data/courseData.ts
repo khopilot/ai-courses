@@ -26,7 +26,7 @@ export interface CourseProgram {
 
 export const courseData: CourseProgram = {
   title: "Practical Web Development and AI Integration: Real-World Application Focus",
-  subtitle: "Comprehensive Proposal for a Teaching Program",
+  subtitle: "",
   author: "by Nicolas Delrieu",
   objective: "To provide students with a hands-on, practical learning experience in web development and AI integration, ensuring quick tangible results through real-use case applications.",
   targetAudience: "Students interested in technology, computer science, IT, or related fields seeking to enhance their technical skills and career readiness. Also, any person that want to learn from scratch.",
