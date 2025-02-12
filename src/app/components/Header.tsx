@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import MatrixRain from './MatrixRain';
 
 interface HeaderProps {
   title: string;
@@ -16,8 +17,13 @@ export default function Header({ title, subtitle, author, objective, targetAudie
         {/* Subtle gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#12131A] via-[#171923] to-[#1A1B26]"></div>
         
+        {/* Matrix Rain Effect */}
+        <div className="absolute inset-0" style={{ zIndex: 1 }}>
+          <MatrixRain />
+        </div>
+        
         {/* Cambodia SVG Background */}
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 2 }}>
           <div className="relative w-[1200px] h-[1200px] transform -rotate-12">
             <Image
               src="/cambodia.svg"
@@ -33,7 +39,7 @@ export default function Header({ title, subtitle, author, objective, targetAudie
         </div>
 
         {/* Grid pattern */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0" style={{ zIndex: 3 }}>
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:2rem_2rem] sm:bg-[size:4rem_4rem] opacity-20"></div>
         </div>
       </div>
