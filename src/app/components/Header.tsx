@@ -14,43 +14,74 @@ export default function Header({ title, subtitle, author, objective, targetAudie
   return (
     <header className="relative min-h-screen overflow-hidden perspective-2000">
       {/* Social Media Links */}
-      <div className="absolute top-4 right-4 z-50 flex items-center gap-4">
-        <a
-          href="https://www.linkedin.com/in/nicolas-delrieu-a61a60224"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white/80 hover:text-white transform hover:scale-110 transition-all duration-300"
-          aria-label="LinkedIn"
-        >
-          <FaLinkedin className="w-6 h-6" />
-        </a>
-        <a
-          href="https://github.com/khopilot"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white/80 hover:text-white transform hover:scale-110 transition-all duration-300"
-          aria-label="GitHub"
-        >
-          <FaGithub className="w-6 h-6" />
-        </a>
-        <a
-          href="https://t.me/+85592332554"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white/80 hover:text-white transform hover:scale-110 transition-all duration-300"
-          aria-label="Telegram"
-        >
-          <FaTelegram className="w-6 h-6" />
-        </a>
-        <a
-          href="https://wa.me/85592332554"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white/80 hover:text-white transform hover:scale-110 transition-all duration-300"
-          aria-label="WhatsApp"
-        >
-          <FaWhatsapp className="w-6 h-6" />
-        </a>
+      <div className="absolute top-6 right-6 z-50">
+        {/* Glass container for icons */}
+        <div className="backdrop-blur-lg bg-white/10 rounded-2xl p-3 shadow-[0_8px_32px_rgba(0,0,0,0.2)] border border-white/20">
+          <div className="flex items-center gap-4">
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/nicolas-delrieu-a61a60224"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative"
+              aria-label="LinkedIn"
+            >
+              <div className="absolute -inset-2 bg-gradient-to-r from-blue-600 to-blue-400 rounded-lg blur-lg opacity-0 group-hover:opacity-40 transition-all duration-500"></div>
+              <div className="relative transform transition-all duration-300 hover:scale-110">
+                <FaLinkedin className="w-6 h-6 text-white/90 group-hover:text-white" />
+              </div>
+            </a>
+
+            {/* GitHub */}
+            <a
+              href="https://github.com/khopilot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative"
+              aria-label="GitHub"
+            >
+              <div className="absolute -inset-2 bg-gradient-to-r from-purple-600 to-purple-400 rounded-lg blur-lg opacity-0 group-hover:opacity-40 transition-all duration-500"></div>
+              <div className="relative transform transition-all duration-300 hover:scale-110">
+                <FaGithub className="w-6 h-6 text-white/90 group-hover:text-white" />
+              </div>
+            </a>
+
+            {/* Telegram */}
+            <a
+              href="https://t.me/+85592332554"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative"
+              aria-label="Telegram"
+            >
+              <div className="absolute -inset-2 bg-gradient-to-r from-sky-600 to-sky-400 rounded-lg blur-lg opacity-0 group-hover:opacity-40 transition-all duration-500"></div>
+              <div className="relative transform transition-all duration-300 hover:scale-110">
+                <FaTelegram className="w-6 h-6 text-white/90 group-hover:text-white" />
+              </div>
+            </a>
+
+            {/* WhatsApp */}
+            <a
+              href="https://wa.me/85592332554"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative"
+              aria-label="WhatsApp"
+            >
+              <div className="absolute -inset-2 bg-gradient-to-r from-green-600 to-green-400 rounded-lg blur-lg opacity-0 group-hover:opacity-40 transition-all duration-500"></div>
+              <div className="relative transform transition-all duration-300 hover:scale-110">
+                <FaWhatsapp className="w-6 h-6 text-white/90 group-hover:text-white" />
+              </div>
+            </a>
+          </div>
+
+          {/* Decorative elements */}
+          <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-500/20 via-transparent to-blue-500/20 rounded-2xl pointer-events-none"></div>
+          <div className="absolute -inset-[1px] bg-gradient-to-b from-white/5 to-transparent rounded-2xl pointer-events-none"></div>
+        </div>
+
+        {/* Animated glow effect */}
+        <div className="absolute -inset-2 bg-gradient-to-r from-purple-600/30 via-transparent to-blue-600/30 rounded-3xl blur-xl opacity-50 animate-pulse-slow pointer-events-none"></div>
       </div>
 
       {/* Animated background with advanced effects */}
